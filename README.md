@@ -1,50 +1,47 @@
-# FINANCE
 # Finance: A Stock Portfolio
 
-Project for Week 8 of Harvard's CS50
+Finance is a web app developed as the project for Week 8 of Harvard's CS50 course.
 
-[View the full assignment description on CS50's OpenCourseWare](https://cs50.harvard.edu/x/2020/tracks/web/finance/)
-
-<img src="screenshot.png" alt="screenshot of finance project" width="600px">
+![Finance App](![image](https://github.com/habert-kungu/CS50-finance/assets/147383053/3c10ebf1-9ede-4101-adf5-9f4e5074ad03)
+)
 
 ## Technologies
-* Python
-* Flask with session authentication
-* SQL
-* HTML
-* Bootstrap
-
+- Python
+- Flask (with session authentication)
+- SQL
+- HTML
+- Bootstrap
 
 ## Summary
-Finance is a web app that allows logged-in users to "buy" and "sell" stocks (with pretend money) as well as look up real stock quotes fetched from IEX API. Users can also view their stock portfolio transaction history.
+Finance is a web app that allows logged-in users to manage a virtual stock portfolio. Users can "buy" and "sell" stocks with pretend money, look up real stock quotes fetched from the IEX API, and view their transaction history.
 
 ## How to Run
-1. Clone this repository, navigate to the project and type the following commands:
-2. Activate a virtual environment: 'python3 -m venv .venv' then select the virtual environment as the active workspace
-3. Install dependencies: 'pip install -r requirements.txt'
-4. Run command 'export FLASK_APP=application.py' to set the Flask environment variable
-5. <a href="https://cs50.harvard.edu/x/2020/tracks/web/finance/#configuring">Configure and export your API key with these instructions</a>
-6. Run command 'flask run' to open on localhost 
-7. When the finance site opens in your browser, register for a new account (upper right corner) to create your own stock portfolio
+1. Clone this repository and navigate to the project directory.
+2. Activate a virtual environment: `python3 -m venv .venv`, then activate it.
+3. Install dependencies: `pip install -r requirements.txt`.
+4. Set the Flask environment variable: `export FLASK_APP=application.py`.
+5. Follow the instructions [here](https://cs50.harvard.edu/x/2020/tracks/web/finance/#configuring) to configure and export your API key.
+6. Run the app: `flask run`.
+7. Register for a new account on the finance site to create your stock portfolio.
 
 ## Views
 
 ### Register
-Allow a new user to register for an account, rendering an apology view if the form data is incomplete or if the username already exists in the database.
+Allows new users to register for an account. Renders an apology view if the form data is incomplete or if the username already exists in the database.
 
 ### Index
-The homepage displays a table of the logged-in user's owned stocks, number of shares, current stock price, value of each holding. This view also shows the user's imaginary "cash" balance and the total of their "cash" plus stock value.
+Displays a table of the logged-in user's owned stocks, including the number of shares, current stock price, and value of each holding. Also shows the user's imaginary "cash" balance and the total of their "cash" plus stock value.
 
 ### Quote
-Allows the user to submit a form to look up a stock's current price, retrieving real-time data from the IEX API. An error message is rendered if the stock symbol is invalid.
+Allows users to look up a stock's current price by submitting a form. Retrieves real-time data from the IEX API. Renders an error message if the stock symbol is invalid.
 
 ### Buy
-Allows the user to "buy" stocks by submitting a form with the stock's symbol and number of shares. Checks to ensure the stock symbol is valid and the user can afford the purchase at the stock's current market price with their available balance, and stores the transaction history in the database.
+Enables users to "buy" stocks by submitting a form with the stock's symbol and number of shares. Checks if the stock symbol is valid and if the user can afford the purchase at the stock's current market price with their available balance. Stores the transaction history in the database.
 
 ### Sell
-Allows the user to "sell" shares of any stock currently owned in their portfolio. 
+Allows users to "sell" shares of any stock currently owned in their portfolio.
 
 ### History
-Displays a table summarizing the user's past transactions (all buys and sells). Each row in the table lists whether the stock was bought or sold, the stock's symbol, the buy/sell price, the number of shares, and the transaction's date/time.
+Displays a table summarizing the user's past transactions (buys and sells). Each row lists whether the stock was bought or sold, the stock's symbol, the buy/sell price, the number of shares, and the transaction date/time.
 
 ---
