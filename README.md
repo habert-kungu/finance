@@ -2,7 +2,9 @@
 
 Finance is a web app developed as the project for Week 8 of Harvard's CS50 course.
 
-https://github.com/habert-kungu/CS50-finance/assets/147383053/3c10ebf1-9ede-4101-adf5-9f4e5074ad03)
+
+<img width="819" alt="screenshot" src="https://github.com/habert-kungu/CS50-finance/assets/147383053/c6fa2b47-ae79-4a30-8137-67a1e5cfde16">
+
 
 
 ## Technologies
